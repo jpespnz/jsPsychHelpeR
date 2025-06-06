@@ -1,4 +1,4 @@
 library(tidyverse)
 DF = read.csv("~/outputs/data/DF_analysis.csv")
 
-DF = filter(AIM!=99)
+DF = filter()
