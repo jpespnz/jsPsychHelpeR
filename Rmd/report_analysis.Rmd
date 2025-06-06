@@ -10,7 +10,7 @@ params:
   pid_report: 0
 ---
 
-```{r setup, cat(include=FALSE)}
+```{r setup}
 
 # knitr::opts_chunk$set(echo = TRUE)
 
@@ -31,7 +31,7 @@ targets::tar_load(DF_analysis)
 
 Descripción del proceso de preparación de datos.
 
-```{r data-preparation}
+```{r data-preparation, message = FALSE, echo=FALSE, results='asis'}
 
 DF =
  DF_analysis$DF_analysis %>% 
@@ -40,8 +40,8 @@ DF =
   select(id, ends_with("_DIRd"), ends_with("_DIRt"))
   
   # Continue your data preparation, if needed
-  #   filter() %>% 
-  #   drop_na()
+    # filter()
+  # drop_na()
 
 
 ```
@@ -50,7 +50,7 @@ DF =
 
 Tabla 1. Descripción de la tabla 1. Tabla 2. ...
 
-```{r descriptive-table}
+```{r descriptive-table, message = FALSE, echo=FALSE, results='asis'}
 
 # You can add a variable to the `by` argument and uncomment
 # names(DF) shows the variables you hava available
@@ -58,12 +58,20 @@ Tabla 1. Descripción de la tabla 1. Tabla 2. ...
 
 table1 = DF |>
   dplyr::select(where(is.numeric), -id, -Goodbye_DIRt) |> 
-  gtsummary::tbl_summary(
-    # by = AIM_DIRt,
+  gtsummary::tbl_summary(by = AIM_TramoIngreso_DIRd,
     type = list(everything() ~ 'continuous')
     )
 
 table1
+
+DF |> 
+  select(-Goodbye_DIRt, -id,  -Consent_DIRt,  -AIM_DIRt) |> 
+  gtsummary::tbl_summary(by = AIM_TramoIngreso_DIRd,
+                         statistic = list(all_continuous()~"{mean} {sd}", 
+                                          all_categorical()~"{n} ({p}%)"),
+                         missing = "ifany") |> 
+  gtsummary::add_n() |> 
+  gtsummary::modify_spanning_header(c("stat_1", "stat_2") ~ "**AIM_TramoIngreso_DIRd**")
 
 ```
 
@@ -71,7 +79,7 @@ table1
 
 Figura 1. Descripción de la Figura 1. Figura 2. ...
 
-```{r plots}
+```{r plots, message = FALSE, echo=FALSE, results='asis'}
 
 # Remember to change the variables in your plot
 
@@ -88,7 +96,7 @@ plot1
 
 ## Analysis
 
-```{r analysis}
+```{r analysis, message = FALSE, echo=FALSE, results='asis'}
 
 # Remember to change the variables used in your model and inline_text 
 
