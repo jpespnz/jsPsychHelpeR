@@ -1,0 +1,31 @@
+id,AIM_001_RAW,AIM_002_RAW,AIM_003_RAW,AIM_010_RAW,AIM_001_DIR,AIM_002_DIR,AIM_003_DIR,AIM_010_DIR,AIM_RAW_NA,AIM_DIR_NA,AIM_TramoIngreso_DIRd,AIM_DIRt
+1,Básica completa; primaria o preparatoria completa.,Trabajadores de los servicios y vendedores de comercio y mercados.,58,464 mil – 808 mil,3,3,7,2,0,0,2,d
+10,Básica incompleta; primaria o preparatoria incompleta.,Agricultores y trabajadores calificados agropecuarios y pesqueros.,100,4.290.000 – 7.482.000,2,4,7,6,0,0,6,c2
+11,Universitaria incompleta (carreras de 4 o más años).,"Profesionales, científicos e intelectuales.",12,Más de 7.482.000,8,8,7,7,0,0,7,c1a
+12,Media científico humanista o media técnico profesional incompleta; humanidades incompletas.,"Alto ejecutivo (gerente general o gerente de área o sector) de empresa privadas o pública- Director o dueño de grandes empresa- Alto directivo del poder ejecutivo, de los cuerpos legislativos y la administración pública (incluye oficiales de FFAA y Carabineros).",58,Menos de 464 mil,4,9,7,1,0,0,1,d
+13,Universitaria incompleta (carreras de 4 o más años).,Empleados de oficina públicos y privados.,26,809 mil – 1.409.000 mil,8,6,7,3,0,0,3,c3
+14,Universitaria completa (carreras de 4 o más años); oficial de FFAA y Carabineros.,Trabajadores de los servicios y vendedores de comercio y mercados.,16,Más de 7.482.000,9,3,7,7,0,0,7,c1b
+15,Instituto técnico (CFT) o instituto profesional incompleto (carreras de 1 a 3 años).,"Profesionales, científicos e intelectuales.",36,809 mil – 1.409.000 mil,6,8,7,3,0,0,3,c2
+16,Básica completa; primaria o preparatoria completa.,"Trabajadores no calificados en ventas y servicios, peones agropecuarios, forestales, construcción, etc.",69,2.460.000 – 4.289.000,3,1,7,5,0,0,5,c3
+17,Universitaria incompleta (carreras de 4 o más años).,Trabajadores de los servicios y vendedores de comercio y mercados.,82,NS/NR,8,3,7,99,0,0,99,
+18,Sin estudios formales.,"Obreros, operarios y artesanos de artes mecánicas y de otros oficios.",76,809 mil – 1.409.000 mil,1,2,7,3,0,0,3,d
+19,Básica completa; primaria o preparatoria completa.,Trabajadores de los servicios y vendedores de comercio y mercados.,72,809 mil – 1.409.000 mil,3,3,7,3,0,0,3,d
+2,Universitaria completa (carreras de 4 o más años); oficial de FFAA y Carabineros.,Trabajadores de los servicios y vendedores de comercio y mercados.,41,NS/NR,9,3,7,99,0,0,99,
+20,Básica incompleta; primaria o preparatoria incompleta.,Operadores de instalaciones y máquinas y montadores / conductores de vehículos.,40,4.290.000 – 7.482.000,2,5,7,6,0,0,6,c2
+21,Básica completa; primaria o preparatoria completa.,Agricultores y trabajadores calificados agropecuarios y pesqueros.,42,Menos de 464 mil,3,4,7,1,0,0,1,e
+22,Media científico humanista o media técnico profesional completa; humanidades completas.,Trabajadores de los servicios y vendedores de comercio y mercados.,38,464 mil – 808 mil,5,3,7,2,0,0,2,d
+23,Media científico humanista o media técnico profesional incompleta; humanidades incompletas.,Técnicos y profesionales de nivel medio (incluye hasta suboficiales FFAA y Carabineros).,45,2.460.000 – 4.289.000,4,7,7,5,0,0,5,c2
+24,Básica completa; primaria o preparatoria completa.,"Trabajadores no calificados en ventas y servicios, peones agropecuarios, forestales, construcción, etc.",20,809 mil – 1.409.000 mil,3,1,7,3,0,0,3,d
+25,Instituto técnico (CFT) o instituto profesional completo (carreras de 1 a 3 años); hasta suboficial de FFAA y Carabineros.,"Obreros, operarios y artesanos de artes mecánicas y de otros oficios.",49,809 mil – 1.409.000 mil,7,2,7,3,0,0,3,c3
+26,Sin estudios formales.,"Otros grupos no identificados (incluye rentistas, personas en situación de discapacidad, etc.)",47,464 mil – 808 mil,1,10,7,2,0,0,2,d
+27,Básica incompleta; primaria o preparatoria incompleta.,Trabajadores de los servicios y vendedores de comercio y mercados.,36,NS/NR,2,3,7,99,0,0,99,
+28,"Postgrado (postítulo, master, magíster, doctor).","Obreros, operarios y artesanos de artes mecánicas y de otros oficios.",81,Más de 7.482.000,10,2,7,7,0,0,7,c1b
+29,Básica completa; primaria o preparatoria completa.,Trabajadores de los servicios y vendedores de comercio y mercados.,30,464 mil – 808 mil,3,3,7,2,0,0,2,d
+3,Básica completa; primaria o preparatoria completa.,"Profesionales, científicos e intelectuales.",27,1.410.000 mil – 2.459.000,3,8,7,4,0,0,4,c2
+30,Básica incompleta; primaria o preparatoria incompleta.,Trabajadores de los servicios y vendedores de comercio y mercados.,57,NS/NR,2,3,7,99,0,0,99,
+4,Básica completa; primaria o preparatoria completa.,Trabajadores de los servicios y vendedores de comercio y mercados.,27,2.460.000 – 4.289.000,3,3,7,5,0,0,5,c2
+5,Universitaria incompleta (carreras de 4 o más años).,"Obreros, operarios y artesanos de artes mecánicas y de otros oficios.",38,Menos de 464 mil,8,2,7,1,0,0,1,d
+6,Básica completa; primaria o preparatoria completa.,"Trabajadores no calificados en ventas y servicios, peones agropecuarios, forestales, construcción, etc.",50,4.290.000 – 7.482.000,3,1,7,6,0,0,6,c2
+7,Básica incompleta; primaria o preparatoria incompleta.,"Otros grupos no identificados (incluye rentistas, personas en situación de discapacidad, etc.)",77,NS/NR,2,10,7,99,0,0,99,
+8,Sin estudios formales.,"Obreros, operarios y artesanos de artes mecánicas y de otros oficios.",54,Menos de 464 mil,1,2,7,1,0,0,1,e
+9,"Postgrado (postítulo, master, magíster, doctor).","Profesionales, científicos e intelectuales.",46,4.290.000 – 7.482.000,10,8,7,6,0,0,6,c1a
