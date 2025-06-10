@@ -35,7 +35,7 @@ targets::tar_load(DF_analysis)
 
 ## Data preparation
 
-La preparación de datos se realizó a traves de "monkeys" que generaron los datos para su posterior análisiss
+La preparación de datos se realizó a traves de "monkeys" que generaron los datos para su posterior análisis
 
 ```{r data-preparation, message = FALSE, echo=FALSE, results='asis'}
 
