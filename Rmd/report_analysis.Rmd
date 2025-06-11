@@ -82,9 +82,40 @@ table1
 
 ```
 
-## Plots
+## Análisis
 
-Figura 1. Relación entre tramos de ingresos y dominios de salud mental (DASS-21)
+```{r analysis, message = FALSE, echo=FALSE, results='asis'}
+
+models <- list(
+  model1 = lm(DASS21_estres_DIRd ~ AIM_TramoIngreso_DIRd, data = DF),
+  model2 = lm(DASS21_ansiedad_DIRd ~ AIM_TramoIngreso_DIRd, data = DF),
+  model3 = lm(DASS21_depresion_DIRd ~ AIM_TramoIngreso_DIRd, data = DF)
+)
+
+tables <- lapply(models, function(m) tbl_regression(m, intercept = TRUE))
+
+table_model <- tbl_merge(
+  tbls = tables,
+  tab_spanner = c("Estrés", "Ansiedad", "Depresión")) %>%
+  bold_labels() %>%
+  italicize_levels()
+
+table_model
+
+text_report <- paste0(
+  "AIM no fue un predictor significativo del estrés, β = ", 
+  inline_text(tables[[1]], variable = AIM_TramoIngreso_DIRd), "; ",
+  "tampoco de la ansiedad, β = ", 
+  inline_text(tables[[2]], variable = AIM_TramoIngreso_DIRd), "; ",
+  "ni de la depresión, β = ", 
+  inline_text(tables[[3]], variable = AIM_TramoIngreso_DIRd), "."
+)
+
+cat(text_report)
+
+```
+
+#### Figura 1. Relación entre tramos de ingresos y dominios de salud mental (DASS-21)
 
 ```{r plots, message = FALSE, echo=FALSE, results='asis'}
 
@@ -137,37 +168,4 @@ plot3 <- DF %>%
     ) +
     theme_minimal(base_size = 10)
 cowplot::plot_grid(plot1,plot2,plot3, ncol = 1)
-```
-
-## Análisis
-
-```{r analysis, message = FALSE, echo=FALSE, results='asis'}
-
-models <- list(
-  model1 = lm(DASS21_estres_DIRd ~ AIM_TramoIngreso_DIRd, data = DF),
-  model2 = lm(DASS21_ansiedad_DIRd ~ AIM_TramoIngreso_DIRd, data = DF),
-  model3 = lm(DASS21_depresion_DIRd ~ AIM_TramoIngreso_DIRd, data = DF)
-)
-
-tables <- lapply(models, function(m) tbl_regression(m, intercept = TRUE))
-
-table_model <- tbl_merge(
-  tbls = tables,
-  tab_spanner = c("Estrés", "Ansiedad", "Depresión")) %>%
-  bold_labels() %>%
-  italicize_levels()
-
-table_model
-
-text_report <- paste0(
-  "AIM no fue un predictor significativo del estrés, β = ", 
-  inline_text(tables[[1]], variable = AIM_TramoIngreso_DIRd), "; ",
-  "tampoco de la ansiedad, β = ", 
-  inline_text(tables[[2]], variable = AIM_TramoIngreso_DIRd), "; ",
-  "ni de la depresión, β = ", 
-  inline_text(tables[[3]], variable = AIM_TramoIngreso_DIRd), "."
-)
-
-cat(text_report)
-
 ```
