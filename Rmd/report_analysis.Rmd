@@ -33,9 +33,11 @@ targets::tar_load(DF_analysis)
 
 ```
 
-## Data preparation
+# Métodos
 
-La preparación de datos se realizó a traves de "monkeys" que generaron los datos para su posterior análisis
+## Preparación de los datos
+
+Para esta etapa, se utilizaron 30 “monkeys”, es decir, agentes automatizados diseñados para simular respuestas de manera realista. Gracias a ellos, fue posible generar una base de datos sintética, controlada y reproducible, que permitió preparar el camino para los análisis posteriores.
 
 ```{r data-preparation, message = FALSE, echo=FALSE, results='asis'}
 
@@ -52,9 +54,11 @@ DF =
 
 ```
 
-## Descriptive tables
+# Análisis
 
-Tabla 1. Datos descriptivos entre dominios del DASS-21 y tramos de ingreso
+Se realizaron regresiones lineales con el objetivo de explorar la relación entre el tramo de ingreso y los niveles de salud mental, evaluados mediante las subescalas de estrés, ansiedad y depresión del cuestionario DASS-21. Cada dimensión fue analizada por separado para identificar posibles asociaciones con el nivel de ingreso reportado.
+
+### Tabla 1. Datos descriptivos entre dominios del DASS-21 y tramos de ingreso
 
 ```{r descriptive-table, message = FALSE, echo=FALSE, results='asis'}
 
@@ -82,7 +86,7 @@ table1
 
 ```
 
-## Análisis
+### Tabla 2. Modelos de regresión lineal entre tramo de ingreso y dominios de salud mental (DASS-21)
 
 ```{r analysis, message = FALSE, echo=FALSE, results='asis'}
 
@@ -102,20 +106,9 @@ table_model <- tbl_merge(
 
 table_model
 
-text_report <- paste0(
-  "AIM no fue un predictor significativo del estrés, β = ", 
-  inline_text(tables[[1]], variable = AIM_TramoIngreso_DIRd), "; ",
-  "tampoco de la ansiedad, β = ", 
-  inline_text(tables[[2]], variable = AIM_TramoIngreso_DIRd), "; ",
-  "ni de la depresión, β = ", 
-  inline_text(tables[[3]], variable = AIM_TramoIngreso_DIRd), "."
-)
-
-cat(text_report)
-
 ```
 
-#### Figura 1. Relación entre tramos de ingresos y dominios de salud mental (DASS-21)
+### Figura 1. Gráficos de los modelos
 
 ```{r plots, message = FALSE, echo=FALSE, results='asis'}
 
@@ -168,4 +161,20 @@ plot3 <- DF %>%
     ) +
     theme_minimal(base_size = 10)
 cowplot::plot_grid(plot1,plot2,plot3, ncol = 1)
+```
+
+# Resultados
+
+```{r, message = FALSE, echo=FALSE, results='asis'}
+text_report <- paste0(
+  "AIM no fue un predictor significativo del estrés, β = ", 
+  inline_text(tables[[1]], variable = AIM_TramoIngreso_DIRd), "; ",
+  "tampoco de la ansiedad, β = ", 
+  inline_text(tables[[2]], variable = AIM_TramoIngreso_DIRd), "; ",
+  "ni de la depresión, β = ", 
+  inline_text(tables[[3]], variable = AIM_TramoIngreso_DIRd), "."
+)
+
+cat(text_report)
+
 ```
