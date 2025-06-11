@@ -10,7 +10,7 @@ params:
   pid_report: 0
 ---
 
-# Introducción
+# Introducción 
 
 El nivel socioeconómico se ha asociado estrechamente con el comportamiento humano; en este contexto, problemas de salud mental como la depresión, la ansiedad y el estrés han sido ampliamente investigados en el ámbito de la psicología.
 
