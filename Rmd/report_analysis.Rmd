@@ -22,7 +22,7 @@ El objetivo de este estudio es explorar la relación entre el tramo de ingreso, 
 
 # DEBUG
   # Makes sure all libraries and functions are available to work interactivelly
-  # targets::tar_load_globals() # Loads all libraries
+  #targets::tar_load_globals() # Loads all libraries
 
 # Loads DF_analysis
 targets::tar_load(DF_analysis)
