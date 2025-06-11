@@ -153,8 +153,7 @@ tables <- lapply(models, function(m) tbl_regression(m, intercept = TRUE))
 
 table_model <- tbl_merge(
   tbls = tables,
-  tab_spanner = c("Estrés", "Ansiedad", "Depresión")
-) %>%
+  tab_spanner = c("Estrés", "Ansiedad", "Depresión")) %>%
   bold_labels() %>%
   italicize_levels()
 
@@ -169,6 +168,6 @@ text_report <- paste0(
   inline_text(tables[[3]], variable = AIM_TramoIngreso_DIRd), "."
 )
 
-text_report
+cat(text_report)
 
 ```
